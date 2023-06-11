@@ -103,3 +103,34 @@ function closing() {
 
 closeButton.addEventListener('click', closing);
 cross.addEventListener('click', closing);
+
+
+function updateText() {
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth < 800) {
+        var containers = document.querySelectorAll('.measures .container');
+        containers.forEach(function(container) {
+            var text = container.textContent.trim();
+
+            switch (text) {
+                case 'Days':
+                    container.textContent = 'DD';
+                    break;
+                case 'Hours':
+                    container.textContent = 'HH';
+                    break;
+                case 'Minutes':
+                    container.textContent = 'MM';
+                    break;
+                case 'Seconds':
+                    container.textContent = 'SS';
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+}
+
+window.addEventListener('resize', updateText);

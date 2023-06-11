@@ -20,12 +20,12 @@
 
     .timer_part{
         font-size: 36px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .measures{
-        column-gap: 15px;
+        column-gap: 25px;
     }
 
     .container{
@@ -37,12 +37,24 @@
     .timer_part:not(:last-child)::after {
         content: ':';
         position: absolute;
-        right: -10px;
+        right: -7px;
     }
 
     .link{
         padding-top: 30px;
         flex-grow: 0;
+    }
+
+    .container{
+        background-color: #FFFFFF;
+        background-image: url('./figure1.svg');
+        width: 64px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    input{
+        width: 50%;
     }
 }
 
@@ -58,6 +70,10 @@
     }
 
     input::placeholder{
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    input{
+        width: 70%;
     }
 }
